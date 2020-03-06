@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>I have a question for you</title>
+	
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style type="text/css">
+	body{
+		background-image: linear-gradient(to right, #A1749C, #FFC500);
+		color: white;
+	}
+	#main{
+		width: 50%;
+		margin-top: 20%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#btn-click{
+		margin: 5%;
+	}
+
+	#question{
+		margin-top: 30%;
+		text-align: center;
+		font-size: 30px;
+	}
+
+	#background{
+		padding:5%;
+
+	}
+
+</style>
+</head>
+
+<body>
+	<div id="questionButton" class="fixed-top">
+			<button id="btn-click" class="btn btn-outline-light btn-sm">I have a question for you</button>
+		</div>
+
+	<div id="main" class="align-middle">
+		<div id="question" class="align-middle">
+			<h1></h1>
+		</div>
+	</div>
+
+	<div id="background" class="fixed-bottom">
+		<button id="btn-warm" class="btn btn-outline-light btn-sm">Warm</button>
+		<button id="btn-cool" class="btn btn-outline-light btn-sm">Cool</button>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script
+	src="https://code.jquery.com/jquery-3.4.1.min.js"
+	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	crossorigin="anonymous"></script>
+	
+	<script type="text/javascript">
+
+		let questions = []; 
+
+		loadQuestions(); 
+
+		$("#btn-click").on("click", function(){
+			let generate = Math.floor((Math.random() * questions.length));
+
+			$('#question').animate({'opacity': 0}, 300, function () {
+				$(this).text(questions[generate]);
+				
+				questions.splice(generate, 1);
+
+				if(questions.length == 0){
+					loadQuestions();
+				}
+
+			}).animate({'opacity': 1}, 300);
+		});
+
+
+		document.querySelector("#btn-cool").onclick = function(){
+			console.log("Theme changed to cool");
+			document.querySelector("body").style.background = "linear-gradient(to right, #7BA876, #93A6C7)"; 
+		}; 
+
+		document.querySelector("#btn-warm").onclick = function(){
+			console.log("Theme changed to warm");
+			document.querySelector("body").style.background = "linear-gradient(to right, #A1749C, #FFC500)"; 
+		}; 
+
+		function loadQuestions(){
+			questions = []; 
+			questions = [
+			"What are you missing out on?", 
+			"What used to be a pretty big deal to you?",
+			"What do you keep thinking about?",
+			"Who do you care about?",
+			"How do you care?",
+			"Where do you keep going back to?",
+			"What are you going through that people don't see?",
+			"What about me intrigues you?",
+			"Who do you feel the best around?",
+			"Do you think I'm kind? Why?",
+			"Is there a feeling you miss?",
+			"What are you still trying to prove to yourself?",
+			"What is the first thing you noticed about me?",
+			"Have I ever hurt you?",
+			"What do you need right now that you aren't communicating?",
+			"What do you think is my love language?",
+			"What makes your heart feel heavy?",
+			"What makes your heart feel light?",
+			"Recall a memory of me.",
+			"Who do you consider a friend?",
+			"Who in your life deserves the biggest thank you?",
+			"Which one of your parents personality traits do you want to keep/let go of?",
+			"What did your last relationship teach you about yourself?",
+			"What has this relationship taught you?",
+			"How does one earn your vulnerability?",
+			"What is something you've learned about yourself this week?",
+			"What about yourself can you improve?",
+			"What is your heart telling you?",
+			"What grounds your faith?",
+			"What was the biggest turning point in your dating life?",
+			"What are you denying yourself?",
+			"What do you enjoy?",
+			"What are you proud of?",
+			"I know I'm in love when _________.",
+			"What are you overthinking right now?",
+			"What do you hope for in the next week?",
+			"What takes you to another world?",
+			"Tell me something about one of your parents.",
+			"Tell me about your closest friend.",
+			"What is an opportunity you are not taking?", 
+			"What makes you smile?",
+			"How do you feel about distance right now?",
+			"Do you love a lot?",
+			"What are you most afraid of? Why?", 
+			"When was the last time you cried?",
+			"What are you looking forward to?",
+			"Whose company do you enjoy?",
+			"Where do you go for yourself?",
+			"How often do you look up?",
+			"How do you feel about today?",
+			"What are you most thankful for?",
+			"How do people see you?",
+			"How are you successful?",
+			"What about yourself do you love?",
+			"What do you need to let go of?",
+			"What inspires you?",
+			"If you could change anything about the way you were raised, what would it be?",
+			"What do you hope for me?",
+			"What do you pray for?",
+			"If you had the ability to erase something that you did in the past, what would it be?"]; 
+
+			console.log(questions.length + " questions successfully loaded!");
+
+		};
+
+
+	</script>
+
+</body>
+</html>

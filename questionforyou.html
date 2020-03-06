@@ -9,7 +9,7 @@
 
     <style type="text/css">
 	body{
-		background-image: linear-gradient(to right, #A1749C, #FFC500);
+		background-image: linear-gradient(to right, #A779AE, #FFAF05);
 		color: white;
 	}
 	#main{
@@ -34,32 +34,44 @@
 
 	}
 
+	@media (max-width: 991px) {
+		#main{margin-top: 25%;}}
+	@media (max-width: 767px) {
+		#main{margin-top: 30%;}}
+	@media (max-width: 575px) {
+		#main{margin-top: 40%;}}
+
+}
+
 </style>
 </head>
 
 <body>
+
 	<div id="questionButton" class="fixed-top">
 			<button id="btn-click" class="btn btn-outline-light btn-sm">I have a question for you</button>
 		</div>
 
 	<div id="main" class="align-middle">
-		<div id="question" class="align-middle">
+		<div id="question" class="align-middle words">
 			<h1></h1>
 		</div>
 	</div>
 
-	<div id="background" class="fixed-bottom">
-		<button id="btn-warm" class="btn btn-outline-light btn-sm">Warm</button>
-		<button id="btn-cool" class="btn btn-outline-light btn-sm">Cool</button>
+	<div>
+		<div id="background" class="fixed-bottom">
+			<button id="btn-warm" class="btn btn-outline-light btn-sm">Warm</button>
+			<button id="btn-cool" class="btn btn-outline-light btn-sm">Cool</button>
+		</div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	<script
-	src="https://code.jquery.com/jquery-3.4.1.min.js"
-	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-	crossorigin="anonymous"></script>
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 	
 	<script type="text/javascript">
 
@@ -85,12 +97,12 @@
 
 		document.querySelector("#btn-cool").onclick = function(){
 			console.log("Theme changed to cool");
-			document.querySelector("body").style.background = "linear-gradient(to right, #7BA876, #93A6C7)"; 
+			document.querySelector("body").style.background = "linear-gradient(to right, #9FC694, #6B8CCA)"; 
 		}; 
 
 		document.querySelector("#btn-warm").onclick = function(){
 			console.log("Theme changed to warm");
-			document.querySelector("body").style.background = "linear-gradient(to right, #A1749C, #FFC500)"; 
+			document.querySelector("body").style.background = "linear-gradient(to right, #A779AE, #FFAF05)"; 
 		}; 
 
 		function loadQuestions(){
@@ -111,7 +123,7 @@
 			"What is the first thing you noticed about me?",
 			"Have I ever hurt you?",
 			"What do you need right now that you aren't communicating?",
-			"What do you think is my love language?",
+			"What do you think is my main love language?",
 			"What makes your heart feel heavy?",
 			"What makes your heart feel light?",
 			"Recall a memory of me.",
@@ -123,6 +135,7 @@
 			"How does one earn your vulnerability?",
 			"What is something you've learned about yourself this week?",
 			"What about yourself can you improve?",
+			"When was a time I surprised you?",
 			"What is your heart telling you?",
 			"What grounds your faith?",
 			"What was the biggest turning point in your dating life?",
@@ -155,6 +168,7 @@
 			"If you could change anything about the way you were raised, what would it be?",
 			"What do you hope for me?",
 			"What do you pray for?",
+			"What does my body language telling you right now?",
 			"If you had the ability to erase something that you did in the past, what would it be?"]; 
 
 			console.log(questions.length + " questions successfully loaded!");

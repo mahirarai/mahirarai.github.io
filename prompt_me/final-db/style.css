@@ -1,0 +1,124 @@
+
+*{
+    max-width: 100%;
+    color: white;
+}
+
+body{
+    background-color: #A4BAEB;
+}
+
+a{
+    color: black;
+}
+a:hover{
+    color: black;
+}
+
+.prompt-btn{
+    padding: 0px;
+}
+
+.prompt-btns{
+    /*background-color: red;*/
+    margin-bottom: 10%;
+}
+
+.hidden{ display: none; }
+
+#prompt{
+    padding-top: 5%;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    font-weight: .2;
+    text-align: left;
+}
+
+.add-dark{
+    color: #414141;
+}
+
+.prompt{
+    text-align: center;
+}
+
+.prompt-fill{
+    font-size: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#your-saved{
+    padding: 3%;
+    margin-right: 3%;
+}
+
+.confirm{
+    margin-top: 10%;
+}
+
+
+.saved-main{
+    margin: 5%;
+}
+
+
+
+.user-choose{
+    text-align: center;
+}
+
+.user-choose h5{
+    color: black;
+}
+
+#main{
+    width: 70%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#btn-save{
+    margin: 2%;
+}
+
+.generate{
+    margin: 10px;
+}
+
+
+#title{
+    padding-top: 1%;
+    padding-bottom: 2%;
+    margin-bottom: 2%;
+    text-align: left;
+}
+
+
+#about{
+     padding-top: 1%;
+    padding-bottom: 2%;
+    margin: 0 auto;
+    text-align: center;
+        width: 60%;
+}
+
+
+@media (min-width: 767px) {
+    .feature2 .row{
+        flex-direction: row-reverse;
+        }
+    }
+
+
+
+
+
+
+
+
+
